@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de Boletos</title>
+    <script src="./js/proyectoFinal.js" defer></script>
+    <script src="./js/regresar.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/estilos.css">
+    <script type="module">
+        import { DateTime } from 'https://cdn.skypack.dev/luxon';
+        const ahora = DateTime.now();
+        console.log('Fecha y hora actual:', ahora.toFormat('yyyy-MM-dd HH:mm:ss'));
+      </script>
+</head>
+
+<body>
+
+    <h1>¡Gracias por tu compra!</h1>
+    <p>Te agradecemos por elegir nuestros boletos. Hemos recibido tu pedido y lo estamos procesando. A continuación,
+        encontrarás un resumen de tu compra:</p>
+
+    <div id="resumen-compra"></div>
+    <p>Recibirás un correo electrónico de confirmación con los detalles de tu compra. Si tienes alguna pregunta, no dudes en contactarnos.</p>
+    
+    <button id="regresarBtn">Regresar a la página de compra</button>
+   
+    
+
+</body>

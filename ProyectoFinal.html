@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compra de Boletos</title>
+    <script src="js/proyectoFinal.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+
+<body>
+
+    <div id="mensajeContainer">
+        <div class="columna" id="columnaImagen">
+            <img src="./assets/mapa_teatro.gif" alt="Ubicación">
+        </div>
+
+        <div class="columna">
+            <label for="vip">VIP:</label>
+            <input type="number" id="vip" min="0" max="5" value="0" onchange="actualizarCarrito('vip')"><br>
+
+            <label for="platino">Platino:</label>
+            <input type="number" id="platino" min="0" max="5" value="0" onchange="actualizarCarrito('platino')"><br>
+
+            <label for="golden">Golden:</label>
+            <input type="number" id="golden" min="0" max="5" value="0" onchange="actualizarCarrito('golden')"><br>
+
+            <label for="discapacitado">Discapacitado:</label>
+            <input type="number" id="discapacitado" min="0" max="5" value="0"
+                onchange="actualizarCarrito('discapacitado')"><br>
+
+            <table id="carrito">
+                <thead>
+                    <tr>
+                        <th>Tipo de Boleto</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody id="carrito-body"></tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Descuento (4x3)</td>
+                        <td id="descuento">-$0.00</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Total</td>
+                        <td id="total"> $0.00</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <button onclick="comprar()">Comprar</button>
+            </table>
+        </div>
+    </div>
+    <h1>Registro de Interés de Clientes</h1>
+
+    <form onsubmit="registrarInteres()" id="cliente-form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br>
+        <br>
+        <button type="button" onclick="registrarInteres()">Registrar Interés</button>
+    </form>
+
+    <h2>Clientes que han mostrado interés:</h2>
+    <ul id="interes-list"></ul>
+
+    <button id="limpiar-lista-btn">Limpiar Lista</button>
+
+</body>

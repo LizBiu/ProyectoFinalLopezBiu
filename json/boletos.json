@@ -1,0 +1,8 @@
+{
+  "vip": { "nombre": "VIP", "precio": 100, "disponibles": 5 },
+  "platino": { "nombre": "Platino", "precio": 80, "disponibles": 5 },
+  "golden": { "nombre": "Golden", "precio": 60, "disponibles": 5 },
+  "discapacitado": { "nombre": "Discapacitado", "precio": 40, "disponibles": 5 }
+}
+
+  
